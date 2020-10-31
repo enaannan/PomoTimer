@@ -53,6 +53,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     // );
 
     showModalBottomSheet(
+      isScrollControlled: true,
         context: context,
         backgroundColor: Colors.white.withOpacity(0),
         builder: (BuildContext context) {
@@ -70,7 +71,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   margin:
                       EdgeInsets.symmetric(horizontal: 35.0, vertical: 15.0),
                   child: TextField(
-                    decoration: InputDecoration(icon: Icon(Icons.email)),
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(icon: Icon(Icons.email),hintText: "email"),
                   ),
                 ),
                 SizedBox(height: 5.0),
@@ -81,8 +83,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     margin:
                         EdgeInsets.symmetric(horizontal: 35.0, vertical: 15.0),
                     child: TextField(
+                      
                       obscureText: true,
-                      decoration: InputDecoration(icon: Icon(Icons.lock)),
+                      decoration: InputDecoration(icon: Icon(Icons.lock),hintText: "Password"),
                     ),
                   ),
                 ),
