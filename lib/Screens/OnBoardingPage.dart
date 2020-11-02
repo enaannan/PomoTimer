@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:pomotimer/Screens/HomePage.dart';
+import 'package:pomotimer/Screens/MainScreen.dart';
+import 'package:pomotimer/Screens/RegisterScreen.dart';
 import 'package:pomotimer/UIComponents/RegisterCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,7 +55,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     // );
 
     showModalBottomSheet(
-      isScrollControlled: true,
+        isScrollControlled: true,
         context: context,
         backgroundColor: Colors.white.withOpacity(0),
         builder: (BuildContext context) {
@@ -65,14 +67,15 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               color: Colors.white,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Container(
                   margin:
                       EdgeInsets.symmetric(horizontal: 35.0, vertical: 15.0),
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(icon: Icon(Icons.email),hintText: "email"),
+                    decoration: InputDecoration(
+                        icon: Icon(Icons.email), hintText: "email"),
                   ),
                 ),
                 SizedBox(height: 5.0),
@@ -83,29 +86,35 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     margin:
                         EdgeInsets.symmetric(horizontal: 35.0, vertical: 15.0),
                     child: TextField(
-                      
                       obscureText: true,
-                      decoration: InputDecoration(icon: Icon(Icons.lock),hintText: "Password"),
+                      decoration: InputDecoration(
+                          icon: Icon(Icons.lock), hintText: "Password"),
                     ),
                   ),
                 ),
-                RegisterCard(textName: "Register", nextScreen: HomePage()),
+                RegisterCard(textName: "Login", nextScreen: MainScreen()),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text("If you already have an account "),
-                      Text(
-                        "Login",
-                        style: GoogleFonts.architectsDaughter(
-                            color: Colors.blue,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 2.0),
-                      )
-                    ],
+                  child: RichText(
+                    text: TextSpan(children: <TextSpan>[
+                      TextSpan(
+                          style: TextStyle(color: Colors.black),
+                          text: "If you don't already have an account "),
+                      TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => RegisterScreen()));
+                            },
+                          style: GoogleFonts.architectsDaughter(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2.0),
+                          text: "Register"),
+                    ]),
+                    maxLines: 1,
                   ),
-                )
+                ),
               ],
             ),
           );
