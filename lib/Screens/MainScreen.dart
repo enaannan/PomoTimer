@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'TimeScreen.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -10,26 +9,12 @@ class MainScreen extends StatelessWidget {
       child: Scaffold(
         body: TabBarView(
           children: [
-            SafeArea(
-                child: Column(
-              children: [
-                AppBar(
-                  title: Text("PomoTimer"),
-                ),
-                Text("Current Task"),
-              CircularProgressIndicator(
-                value: 0.1,
-              )
-              ,
-                Text("Stay focused for " + "timed" + " mins"),
-                ButtonBar()
-              ],
-            )),
+            TimeScreen(),
+           
             SafeArea(
                 child: AppBar(
               title: Text("rere"),
             )),
-            
             SafeArea(
                 child: AppBar(
               title: Text("rere"),
