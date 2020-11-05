@@ -20,6 +20,7 @@ class PomoTimerApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "PomoTimer",
       home: OnBoardingPage(),
+      theme: ThemeData(primaryColor: Colors.white),
     );
   }
 }
