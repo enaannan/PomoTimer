@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:pomotimer/UIComponents/SizedBoxTrasparent.dart';
+import 'package:pomotimer/UIComponents/ProjectsView.dart';
+import 'package:pomotimer/UIComponents/TimeLineView.dart';
 
 class StatisticsPage extends StatelessWidget {
   @override
@@ -41,21 +45,8 @@ class StatisticsPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            Column(
-              children: [
-                SizedBox(
-                  height: 10.0,
-                  child: Container(
-                    color: Colors.transparent,
-                  ),
-                ),
-                Container(
-                  height: 100.0,
-                  color: Colors.blue,
-                )
-              ],
-            ),
-            Text("sdfs"),
+            ProjectsView(),
+            TimeLineView(),
             Text("sdfs"),
             Text("sdfs"),
           ],
@@ -64,3 +55,4 @@ class StatisticsPage extends StatelessWidget {
     );
   }
 }
+
