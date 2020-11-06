@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomotimer/UIComponents/ViewCards.dart';
 import 'SizedBoxTrasparent.dart';
 
 class TimeLineView extends StatelessWidget {
@@ -11,30 +12,44 @@ class TimeLineView extends StatelessWidget {
     return Column(
       children: [
         SizedBoxTrasparent(),
-        Expanded(
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Focus sessions"),
-                  Container(child: Row(children: [ Text("This week"),
-                  Icon(Icons.arrow_drop_down)],),)
-                 
-                 
-                ],
-              ),
-              Container(color: Colors.blue,),
-            ],
+        ViewCards(
+          topLeftRadius: 30,
+          topRightRadius: 30,
+          bottomLeftRadius: 30,
+          bottomRightRadius: 30,
+          offsetX: 0,
+          offsetY: 3,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal:15.0,vertical: 8.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Focus sessions"),
+                    Container(
+                      child: Row(
+                        children: [
+                          Text("This week"),
+                          Icon(Icons.arrow_drop_down)
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                Expanded(child: Container(color: Colors.green,))
+              ],
+            ),
           ),
         ),
-        Expanded(
-          child: Column(
-            children: [],
-          ),
+        SizedBoxTrasparent(),
+        ViewCards(
+          topLeftRadius: 30,
+          topRightRadius: 30,
+          offsetX: 0,
+          offsetY: 3,
         )
       ],
     );
   }
 }
-
