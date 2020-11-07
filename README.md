@@ -1,6 +1,6 @@
 # pomotimer
 
-A new Flutter project.
+A time management app built using the pomodoro technique with a lot of customizables.
 
 ## Getting Started
 
