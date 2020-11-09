@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:pomotimer/UIComponents/SizedBoxTrasparent.dart';
 import 'package:pomotimer/UIComponents/ProjectsView.dart';
 import 'package:pomotimer/UIComponents/TimeLineView.dart';
+import 'package:pomotimer/UIComponents/DailyView.dart';
+import 'package:pomotimer/UIComponents/ActivityView.dart';
 
 class StatisticsPage extends StatelessWidget {
   @override
@@ -47,8 +48,8 @@ class StatisticsPage extends StatelessWidget {
           children: [
             ProjectsView(),
             TimeLineView(),
-            Text("sdfs"),
-            Text("sdfs"),
+            DailyView(),
+            ActivityView(),
           ],
         ),
       ),

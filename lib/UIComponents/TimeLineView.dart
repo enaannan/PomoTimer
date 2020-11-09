@@ -13,14 +13,9 @@ class TimeLineView extends StatelessWidget {
       children: [
         SizedBoxTrasparent(),
         ViewCards(
-          topLeftRadius: 30,
-          topRightRadius: 30,
-          bottomLeftRadius: 30,
-          bottomRightRadius: 30,
-          offsetX: 0,
-          offsetY: 3,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal:15.0,vertical: 8.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8.0),
             child: Column(
               children: [
                 Row(
@@ -37,18 +32,45 @@ class TimeLineView extends StatelessWidget {
                     )
                   ],
                 ),
-                Expanded(child: Container(color: Colors.green,))
+                Expanded(
+                    child: Container(
+                  color: Colors.green,
+                ))
               ],
             ),
           ),
         ),
         SizedBoxTrasparent(),
         ViewCards(
-          topLeftRadius: 30,
-          topRightRadius: 30,
           offsetX: 0,
-          offsetY: 3,
-        )
+          offsetY: 0,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 15),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Productivity"),
+                    Row(
+                      children: [
+                        Text("This week"),
+                        Icon(Icons.arrow_drop_down),
+                      ],
+                    )
+                  ],
+                ),
+                Expanded(
+                    child: Container(
+                  color: Colors.blue,
+                ))
+              ],
+            ),
+          ),
+        ),
+        SizedBoxTrasparent(
+          height: 1,
+        ),
       ],
     );
   }

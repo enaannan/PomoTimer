@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'TimeScreen.dart';
 import 'StatisticsPage.dart';
+import 'NewTaskScreen.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -11,10 +12,7 @@ class MainScreen extends StatelessWidget {
         body: TabBarView(
           children: [
             TimeScreen(),
-            SafeArea(
-                child: AppBar(
-              title: Text("rere"),
-            )),
+            NewTaskScreen(),
             StatisticsPage(),
             SafeArea(
                 child: AppBar(
