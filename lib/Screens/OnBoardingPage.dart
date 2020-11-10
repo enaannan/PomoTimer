@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:pomotimer/Screens/MainScreen.dart';
 import 'package:pomotimer/Screens/RegisterScreen.dart';
-import 'package:pomotimer/UIComponents/RegisterCard.dart';
+import 'package:pomotimer/UIComponents/BlueCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -92,7 +92,25 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     ),
                   ),
                 ),
-                RegisterCard(textName: "Login", nextScreen: MainScreen()),
+                BlueCard(textName: "Login",action: 
+                
+                
+                 () => Navigator.push(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) {
+              // return here(animation);fix from here
+              return MainScreen();
+            },
+            transitionDuration: Duration(seconds: 1),
+          ))
+                
+                
+                
+                
+                
+                
+                ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: RichText(

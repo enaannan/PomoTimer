@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'LoginScreen.dart';
 import 'RegisterScreen.dart';
-import 'package:pomotimer/UIComponents/RegisterCard.dart';
+import 'package:pomotimer/UIComponents/BlueCard.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,14 +14,14 @@ class HomePage extends StatelessWidget {
           Container(
               margin: EdgeInsets.symmetric(vertical: 25.0),
               child: Image(image: AssetImage("assets/images/Pomotimer.png"))),
-          RegisterCard(
+          BlueCard(
             textName: "Register",
             nextScreen: RegisterScreen(),
           ),
           SizedBox(
             height: 15.0,
           ),
-          RegisterCard(
+          BlueCard(
             textName: "Login",
             nextScreen: LoginScreen(),
           )
