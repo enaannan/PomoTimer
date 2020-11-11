@@ -16,14 +16,14 @@ class HomePage extends StatelessWidget {
               child: Image(image: AssetImage("assets/images/Pomotimer.png"))),
           BlueCard(
             textName: "Register",
-            nextScreen: RegisterScreen(),
+            action: (){},
           ),
           SizedBox(
             height: 15.0,
           ),
           BlueCard(
             textName: "Login",
-            nextScreen: LoginScreen(),
+           action: (){},
           )
         ],
       ),

@@ -5,7 +5,7 @@ import 'package:pomotimer/UIComponents/TimeLineView.dart';
 import 'package:pomotimer/UIComponents/DailyView.dart';
 import 'package:pomotimer/UIComponents/ActivityView.dart';
 
-class StatisticsPage extends StatelessWidget {
+class StatisticsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
