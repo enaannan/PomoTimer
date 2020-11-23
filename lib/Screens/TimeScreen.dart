@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'ListScreen.dart';
 
 class TimeScreen extends StatelessWidget {
   @override
@@ -12,15 +13,18 @@ class TimeScreen extends StatelessWidget {
         children: [
           AppBar(
             elevation: 0.0,
-          centerTitle: true,
+            centerTitle: true,
             actions: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Icon(Icons.add),
+                child: IconButton(
+                  icon: Icon(Icons.add),
+                  onPressed: openTaskListScreen(context),
+                ),
               )
             ],
             leading: Icon(Icons.list_rounded),
-            title:  Text("PomoTimer"),
+            title: Text("PomoTimer"),
           ),
           Container(
             margin: EdgeInsets.all(20.0),
@@ -108,5 +112,10 @@ class TimeScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  openTaskListScreen(context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => ListScreen()));
   }
 }
