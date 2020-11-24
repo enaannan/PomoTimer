@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pomotimer/Screens/NewTaskScreen.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'ListScreen.dart';
 
@@ -18,12 +19,18 @@ class TimeScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: IconButton(
-                  icon: Icon(Icons.add),
-                  onPressed: openTaskListScreen(context),
-                ),
+                    icon: Icon(Icons.add),
+                    onPressed: () => {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => NewTaskScreen()),),
+                        }),
               )
             ],
-            leading: Icon(Icons.list_rounded),
+            leading: IconButton(
+              icon: Icon(Icons.list_rounded),
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => ListScreen())),
+            ),
             title: Text("PomoTimer"),
           ),
           Container(
@@ -114,8 +121,9 @@ class TimeScreen extends StatelessWidget {
     );
   }
 
-  openTaskListScreen(context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => ListScreen()));
-  }
+//   openTaskListScreen(context) {
+//     Navigator.of(context)
+//         .push(MaterialPageRoute(builder: (context) => ListScreen()));
+//   }
+// }
 }
