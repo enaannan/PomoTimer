@@ -3,12 +3,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pomotimer/Screens/NewTaskScreen.dart';
+import 'package:pomotimer/bloc/bloc.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'ListScreen.dart';
+
 
 class TimeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    bloc.fetchUserInfo();
     return SafeArea(
       child: Column(
         children: [
@@ -21,8 +24,10 @@ class TimeScreen extends StatelessWidget {
                 child: IconButton(
                     icon: Icon(Icons.add),
                     onPressed: () => {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => NewTaskScreen()),),
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => NewTaskScreen()),
+                          ),
                         }),
               )
             ],

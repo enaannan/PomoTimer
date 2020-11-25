@@ -4,12 +4,14 @@ class User {
   int _totalPomodoros;
 
   User.fromJson(Map<String, dynamic> parsedJson) {
+    print(parsedJson);
     _firstName = parsedJson['firstName'];
     _totalPomodoros = parsedJson['pomodoros'].length;
 
     List<_Pomodoro> temp = [];
+    
     for (var i = 0; i < parsedJson['pomodoros'].length; i++) {
-      _Pomodoro _pomodoro = parsedJson['pomodoros'][i];
+      _Pomodoro _pomodoro = _Pomodoro(parsedJson['pomodoros'][i]);
       temp.add(_pomodoro);
     }
 
