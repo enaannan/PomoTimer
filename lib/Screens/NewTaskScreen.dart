@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pomotimer/UIComponents/BlueCard.dart';
+import 'package:pomotimer/widgets/BlueCard.dart';
 
 class NewTaskScreen extends StatelessWidget {
   const NewTaskScreen({

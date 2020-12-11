@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'LoginScreen.dart';
 import 'RegisterScreen.dart';
-import 'package:pomotimer/UIComponents/BlueCard.dart';
+import 'package:pomotimer/widgets/BlueCard.dart';
 
 class HomePage extends StatelessWidget {
   @override

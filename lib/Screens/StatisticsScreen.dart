@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:pomotimer/UIComponents/ProjectsView.dart';
-import 'package:pomotimer/UIComponents/TimeLineView.dart';
-import 'package:pomotimer/UIComponents/DailyView.dart';
-import 'package:pomotimer/UIComponents/ActivityView.dart';
+// import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:pomotimer/widgets/ProjectsView.dart';
+import 'package:pomotimer/widgets/TimeLineView.dart';
+import 'package:pomotimer/widgets/DailyView.dart';
+import 'package:pomotimer/widgets/ActivityView.dart';
 
 class StatisticsScreen extends StatelessWidget {
   @override

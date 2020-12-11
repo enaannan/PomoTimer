@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomotimer/UIComponents/BlueCard.dart';
+import 'package:pomotimer/widgets/BlueCard.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({

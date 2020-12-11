@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomotimer/UIComponents/ViewCards.dart';
+import 'package:pomotimer/widgets/ViewCards.dart';
 import 'SizedBoxTrasparent.dart';
 
 class TimeLineView extends StatelessWidget {

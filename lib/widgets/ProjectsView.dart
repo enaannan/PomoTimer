@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'LinearProgressBar.dart';
 import 'SizedBoxTrasparent.dart';
-import 'package:pomotimer/UIComponents/ViewCards.dart';
+import 'package:pomotimer/widgets/ViewCards.dart';
 
 class ProjectsView extends StatelessWidget {
   const ProjectsView({

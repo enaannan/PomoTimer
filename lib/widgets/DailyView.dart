@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pomotimer/UIComponents/SizedBoxTrasparent.dart';
-import 'package:pomotimer/UIComponents/ViewCards.dart';
+import 'package:pomotimer/widgets/SizedBoxTrasparent.dart';
+import 'package:pomotimer/widgets/ViewCards.dart';
 
 class DailyView extends StatelessWidget {
   const DailyView({

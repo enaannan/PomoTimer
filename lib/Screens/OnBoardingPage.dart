@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:pomotimer/Screens/MainScreen.dart';
 import 'package:pomotimer/Screens/RegisterScreen.dart';
-import 'package:pomotimer/UIComponents/BlueCard.dart';
+import 'package:pomotimer/widgets/BlueCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnBoardingPage extends StatefulWidget {
