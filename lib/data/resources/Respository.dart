@@ -1,5 +1,8 @@
-import '../models/user.dart';
-import 'user_api_provider.dart';
+
+
+import 'package:pomotimer/data/models/user.dart';
+
+import 'ApiProviders/user_api_provider.dart';
 
 class Repository {
   //connects to provider for fetching details about users

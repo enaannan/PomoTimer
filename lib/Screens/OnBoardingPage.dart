@@ -93,8 +93,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   ),
                 ),
                 BlueCard(textName: "Login",action: 
-                
-                
                  () => Navigator.push(
           context,
           PageRouteBuilder(
